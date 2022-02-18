@@ -107,9 +107,7 @@ class HomePage extends Component {
 		}).then((res) => { console.log(res); return res.json() })
 		
 
-		fetch(this.localUrl + 'home', {
-			method: 'GET'
-		})
+		fetch(this.localUrl + 'home')
 		.then(res => {
 			if (res.status === 200) {
 				return res.json()
