@@ -1,10 +1,11 @@
 import React, { useRef, useEffect, useState } from 'react'
 import mapboxgl, { Marker } from 'mapbox-gl'
+import MapboxWorker from 'mapbox-gl/dist/mapbox-gl-csp-worker';
 mapboxgl.accessToken = process.env.REACT_APP_MAPBOX_TOKEN
+mapboxgl.workerClass = MapboxWorker;
 
 function HomePageMap(props) {
-
-	const places = props.places
+	const places = props.places;
 
 	const mapContainer = useRef(null);
 	const map = useRef(null);

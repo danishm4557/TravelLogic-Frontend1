@@ -42,7 +42,8 @@ class HomePage extends Component {
 		}
 	}
 
-	localUrl = 'http://localhost:8000/'
+	// localUrl = 'http://localhost:8000/'
+	localUrl = process.env.REACT_APP_BASEURL
 
 	// getPlaces = (e) => {
 	// 	e.preventDefault()
