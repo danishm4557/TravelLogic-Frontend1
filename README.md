@@ -1,70 +1,78 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# TravelLogic
 
-## Available Scripts
+Have you ever created a spreadsheet on Excel to plan out your 
+vacation and timeblock each day so you can optimize your 
+vacation to its full potential? Or even better, have you ever 
+struggled to decide on points of interests in a new city? You 
+can finally say goodbye to those tidious tasks and have pre-made
+plans available to you with just a few clicks. 
 
-In the project directory, you can run:
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Your first click is here ➡️ [Link To Deployed Application](https://travel-logic-frontend.herokuapp.com/)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Tech Used
 
-### `npm test`
+- MERN
+- Heroku
+- MongoDB Atlas
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+## Installation
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+To run my application locally:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```bash
+  git clone <frontEnd-repo-url>
+  cd <fronEnd-repo>
+  npm init -y
+  npm start
+  --------------
+  git clone <backEnd-repo-url>
+  cd <backEnd-repo>
+  npm init -y
+  nodemon
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## User Stories
 
-### `npm run eject`
+- As a user, I want to be able to search a destination I am visiting and then see what are the most popular locations in that area so I can get a better visual of what all the activity options I have during my visit.
+- As a user, I want to be able to see pricing information about each location so I can plan my budget accordingly.
+- As a user, I want to be able to post pictures from the vacation as well as see other trending posts.
+- As a user, I want to be able to like/dislike/comment on other users' posts.
+- As a user, I want to see a time efficient route on the map based off all the hotspots in my WishList.
+- As a user, I want my WishList printed out so I can recall all the places I have added to the list.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Wireframes
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+[Link to Wireframes](https://www.figma.com/file/SXkM1H6rj35gZUIwY22d8O/TravelLogic?node-id=0%3A1)
+## HTTP Methods
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+GET 
+- Hotspots in the area once user has provided the city name.
+- Trending posts -- for now I'll have it in a reverse list since there will not be many likes and all.
+- Once the user hits submit, app will retrieve all the places user has selected and show it on the map and as a list.
+POST 
+- Once the user clicks "Add to List", app will post all the places and its data in WishList.
+- User can like/dislike a post.
+PUT
+- User will be able to adjust the vacation days -- maybe?
+DELETE
+- User can remove a hotspot from their WishList.
+## Roadmap
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- User Sign-in / Register
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- Social Feed - Users will be able to post photos and interact with others' posts with likes / dislikes / comments.
 
-### Code Splitting
+- User's Plan Database - User should be able to store a plan in the user database linked to their account and retrieve it whenever they like without it being adjusted.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- Plan Edits - User should be allowed to delete a specific POI from the plan or replace it with a different POI.
+## 🔗 API Docs
+- [Triposo](https://www.triposo.com/api/documentation/20220104/examples)
+- [GoogleMaps Autocomplete](https://www.linkedin.com/)
+- [Mapbox GL JS](https://twitter.com/)
 
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
