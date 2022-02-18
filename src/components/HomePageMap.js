@@ -1,6 +1,6 @@
 import React, { useRef, useEffect, useState } from 'react'
 // import mapboxgl, { Marker } from 'mapbox-gl'
-import mapboxgl, { Marker } from '!mapbox-gl'
+import mapboxgl, { Marker } from 'mapbox-gl'
 mapboxgl.accessToken = process.env.REACT_APP_MAPBOX_TOKEN
 // import MapboxWorker from 'mapbox-gl/dist/mapbox-gl-csp-worker'
 
