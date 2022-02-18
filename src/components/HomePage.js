@@ -94,7 +94,7 @@ class HomePage extends Component {
 		}
 
 
-		fetch(this.localUrl + 'home', {
+		fetch(this.localUrl, {
 			method: 'POST',
 			body: JSON.stringify({
 				// place: send the whole array back.. this.state.placesArray
@@ -107,7 +107,7 @@ class HomePage extends Component {
 		}).then((res) => { console.log(res); return res.json() })
 		
 
-		fetch(this.localUrl + 'home')
+		fetch(this.localUrl)
 		.then(res => {
 			if (res.status === 200) {
 				return res.json()
@@ -173,7 +173,7 @@ class HomePage extends Component {
 	handleDelete = (id) => {
 		// e.preventDefault()
 		console.log(id);
-		fetch(this.localUrl + 'home/' + id, {
+		fetch(this.localUrl + '/' + id, {
 			method: 'DELETE',
 			credentials: 'include'
 		}).then(res => {
