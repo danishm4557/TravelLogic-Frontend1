@@ -10,7 +10,7 @@ class NavBar extends Component {
 	render() {
 		return(
 			<>
-				<Navbar className="nav-bar" bg="dark" variant="dark">
+				<Navbar className="nav-bar" id="nav-bar" bg="dark" variant="dark">
 					<Container>
 					<Navbar.Brand href="#home">Travel Logic</Navbar.Brand>
 					<Nav className="me-auto">

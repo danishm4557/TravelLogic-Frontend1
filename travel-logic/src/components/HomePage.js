@@ -13,6 +13,7 @@ import {
 import HotSpots from './HotSpots'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {Navbar, Container, Nav} from 'react-bootstrap'
+import ScrollToTop from "react-scroll-to-top";
 
 
 
@@ -170,6 +171,34 @@ class HomePage extends Component {
 	}
 	
 
+	handleDelete = (id) => {
+		// e.preventDefault()
+		console.log(id);
+		fetch(this.localUrl + 'home/' + id, {
+			method: 'DELETE',
+			credentials: 'include'
+		}).then(res => {
+			console.log(res)
+			if (res.status === 200) {
+				this.setState({
+					placesNearby: [],
+					placeExists: false,
+					placeSelected: null,
+					cityName: '',
+					// startDate: null,
+					// endDate: null,
+					latitude: null,
+					longitude: null,
+					days: [],
+					date: '',
+					places: [],
+					items: null,
+					itinerary_items: []
+				})
+				window.location.replace(`/#nav-bar}`)
+			}
+		})	
+	}
 
 
 	// handleSubmit = (event) => {
@@ -201,7 +230,7 @@ class HomePage extends Component {
 
 
 	render(){
-		console.log(this.state.placesNearby)
+		console.log(this.state.places)
 		// console.log(this.state.days)
 		
 
@@ -240,6 +269,12 @@ class HomePage extends Component {
 				</div>
 				<HotSpots placeExists={this.state.placeExists} days={this.state.days} placesNearby={this.state.placesNearby} places={this.state.places}/>
 				<HomePageMap placeExists={this.state.placeExists} places={this.state.places} placesNearby={this.state.placesNearby} />
+				{this.state.placeExists
+				? <input type="button" value="DELETE PLAN AND RESTART" onClick={(e) => this.handleDelete(this.state.places._id)} className="remove-button"
+				style={{backgroundColor: 'red', color: 'white'}} />
+				: ''
+				}
+				<ScrollToTop smooth />
 			</>
 		)
 	}

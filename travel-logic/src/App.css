@@ -210,6 +210,20 @@ video {
 }
 
 .remove-button {
-margin-right: -32vw;
-border-radius: 1vw;
+/* margin-right: -32vw; */
+border-radius: .5vw;
+margin-top: 3vh;
+margin-bottom: 3vh;
+padding: 1vw;
+}
+
+.edit-button {
+  border-radius: .5vw;
+}
+
+.edit-and-remove-buttons-div {
+  /* background-color: blue; */
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
 }

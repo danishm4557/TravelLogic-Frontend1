@@ -31,6 +31,10 @@ class PlaceDetails extends Component {
 
 
 
+
+
+
+
 	render() {
 		return (
 
@@ -45,17 +49,24 @@ class PlaceDetails extends Component {
 										<h5 className="plan-title">{plan.title}</h5>
 										<div>
 											<h5><strong>{plan.poi.name}</strong></h5>
-											{/* { plan.poi.images[0].sizes.thumbnail.url
+											{/* { plan.poi.images[0].source_id
 											? <div>
 											<img src={plan.images[0].sizes.thumbnail.url} width="30vw" alt="Image"/>
 											</div>
-											: ''
+											: ''													// Trying to import image for each Plan but not working.
 											} */}
 											{/* <img src={plan.images[0].sizes.thumbnail.url} width="30vw" alt="Image"/> */}
+											
+												{/* <img src={plan.poi.images[0].sizes.medium.url} alt="image" /> */}
+											
 											<p>{plan.description}</p>
 										</div>
-										<input type="submit" value="Remove from Plan" className="remove-button"
-										style={{backgroundColor: 'red', color: 'white'}}/>
+										{/* <div className="edit-and-remove-buttons-div">
+											<input type="button" value="Remove from Plan" onClick={({plan}) => this.handleDelete({plan})} className="remove-button"
+											style={{backgroundColor: 'red', color: 'white'}} />
+											<input type="submit" value="Edit" className="edit-button"
+											style={{backgroundColor: 'white', color: 'black'}}/>
+										</div>									 */}
 									</div>
 								))}
 							</div>
