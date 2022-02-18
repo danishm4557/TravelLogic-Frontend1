@@ -1,10 +1,12 @@
 import React, { useRef, useEffect, useState } from 'react'
-import mapboxgl, { Marker } from 'mapbox-gl'
-import MapboxWorker from 'mapbox-gl/dist/mapbox-gl-csp-worker';
+// import mapboxgl, { Marker } from 'mapbox-gl'
+import mapboxgl, { Marker } from '!mapbox-gl'
 mapboxgl.accessToken = process.env.REACT_APP_MAPBOX_TOKEN
-mapboxgl.workerClass = MapboxWorker;
+// import MapboxWorker from 'mapbox-gl/dist/mapbox-gl-csp-worker'
 
 function HomePageMap(props) {
+	// import MapboxWorker from 'mapbox-gl/dist/mapbox-gl-csp-worker'
+
 	const places = props.places;
 
 	const mapContainer = useRef(null);
@@ -44,6 +46,7 @@ function HomePageMap(props) {
 
 	useEffect(() => {
 			// if (map.current) return; // initialize map only once
+			// mapboxgl.workerClass = MapboxWorker
 			const map = new mapboxgl.Map({
 				container: mapContainer.current,
 				style: 'mapbox://styles/mapbox/streets-v11',
