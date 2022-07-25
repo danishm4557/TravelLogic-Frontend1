@@ -26,38 +26,31 @@ body {
   background-color: blanchedalmond !important;
 }
 
-.me-auto {
-  display: flex;
-  position: absolute;
-  left: 80vw;
-}
-
-.nav-bar {
+ls .nav-bar {
   position: fixed !important;
   z-index: 1;
   width: 100vw;
-
 }
 
 .plan-a-trip {
   /* margin-top: 3vh; */
-  background-color: rgba(245, 245, 245, .6);
-  padding: .5vh 0 .5vh 0;
+  background-color: rgba(245, 245, 245, 0.6);
+  padding: 0.5vh 0 0.5vh 0;
   z-index: 3;
   position: absolute;
   margin-top: -90vh;
   margin-left: 40vw;
   border-radius: 1vw;
-  padding: .5vw;
+  padding: 0.5vw;
   padding-left: 1.2vw;
-  letter-spacing: .5vw;
+  letter-spacing: 0.5vw;
 }
 
 .search-form {
   height: 30vh;
   display: flex;
   justify-content: space-around;
-  background-color: rgba(245, 245, 245, .6);
+  background-color: rgba(245, 245, 245, 0.6);
   width: 80vw;
   position: absolute;
   /* margin-top: 2vh;
@@ -65,7 +58,6 @@ body {
   border-radius: 2vw;
   margin-top: -80vh;
   margin-left: 10vw;
-
 }
 
 .going-to-input {
@@ -79,20 +71,20 @@ body {
 }
 
 .start-date-label {
-position: relative;
-margin-top: 2.5vh;
-margin-left: 2vw;
-font-size: 2vh;
-font-weight: bold;
+  position: relative;
+  margin-top: 2.5vh;
+  margin-left: 2vw;
+  font-size: 2vh;
+  font-weight: bold;
 }
 
 .end-date-label {
   position: relative;
   margin-top: 2.5vh;
-  margin-right: .7vw;
+  margin-right: 0.7vw;
   font-size: 2vh;
   font-weight: bold;
-    }
+}
 
 .date-input {
   width: 15vw;
@@ -122,15 +114,14 @@ font-weight: bold;
   height: 90vh;
 }
 
-
 video {
   width: 100%;
   height: 102.2vh;
 }
 
 .trip-title {
-  display:flex ;
-  flex-direction:column;
+  display: flex;
+  flex-direction: column;
   align-items: center;
   float: right;
   overflow-y: auto;
@@ -148,7 +139,6 @@ video {
   background-color: rgba(0,0,0,.8);
 } */
 
-
 /* .trip-title-city-name {
   z-index: 5;
   position: relative;
@@ -160,10 +150,10 @@ video {
   overflow-y: scroll; 
 } */
 
- .trip-title-city-name {
+.trip-title-city-name {
   position: absolute;
   top: 3;
-  background-color: rgba(0,0,0,.6);
+  background-color: rgba(0, 0, 0, 0.6);
   width: 44.9%;
   color: white;
   align-self: center;
@@ -195,7 +185,7 @@ video {
 }
 
 .plan-title {
-  background-color: rgba(0,0,0,.8);
+  background-color: rgba(0, 0, 0, 0.8);
   color: white;
 }
 
@@ -206,19 +196,19 @@ video {
   margin-bottom: -0.3vh;
   vertical-align: middle;
   padding: 1.5vh;
-  border: solid black .2vw;
+  border: solid black 0.2vw;
 }
 
 .remove-button {
-/* margin-right: -32vw; */
-border-radius: .5vw;
-margin-top: 3vh;
-margin-bottom: 3vh;
-padding: 1vw;
+  /* margin-right: -32vw; */
+  border-radius: 0.5vw;
+  margin-top: 3vh;
+  margin-bottom: 3vh;
+  padding: 1vw;
 }
 
 .edit-button {
-  border-radius: .5vw;
+  border-radius: 0.5vw;
 }
 
 .edit-and-remove-buttons-div {
