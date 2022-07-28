@@ -229,7 +229,7 @@ class HomePage extends Component {
               className="going-to-input"
               name="going-to"
               placeholder="📍 Going to"
-              key={process.env.REACT_APP_GOOGLE_APIKEY}
+              apiKey={process.env.REACT_APP_GOOGLE_APIKEY}
               onPlaceSelected={(place) => {
                 // console.log(place)
                 this.state.placeSelected = place;
