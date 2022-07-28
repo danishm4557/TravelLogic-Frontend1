@@ -141,7 +141,12 @@ class HomePage extends Component {
           days: data.results[0].days,
         });
         this.handleSubmit(data);
-      });
+      })
+      .then(() => {
+        this.setState({
+          places: [],
+        })
+      })
     // .then(json => {
     // 	this.handleSubmit(json)
     // })
@@ -225,7 +230,6 @@ class HomePage extends Component {
         <h1 className="plan-a-trip">PLAN A TRIP</h1>
         <div>
           <form onSubmit={this.getPlaces} className="search-form">
-            {this.state.places = []}
             <Autocomplete
               className="going-to-input"
               name="going-to"
