@@ -79,7 +79,7 @@ class HomePage extends Component {
       console.log(this.state.places);
     }
 
-    fetch(this.localUrl + "home", {
+    fetch(this.localUrl, {
       method: "POST",
       body: JSON.stringify({
         // place: send the whole array back.. this.state.placesArray
@@ -169,7 +169,7 @@ class HomePage extends Component {
   handleDelete = (id) => {
     // e.preventDefault()
     console.log(id);
-    fetch(this.localUrl + "home/" + id, {
+    fetch(this.localUrl + id, {
       method: "DELETE",
       credentials: "include",
     }).then((res) => {
