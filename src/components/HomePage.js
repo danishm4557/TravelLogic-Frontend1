@@ -169,7 +169,7 @@ class HomePage extends Component {
   handleDelete = (id) => {
     // e.preventDefault()
     console.log(id);
-    fetch(this.localUrl + id, {
+    fetch(this.localUrl + "/" + id, {
       method: "DELETE",
       credentials: "include",
     }).then((res) => {
