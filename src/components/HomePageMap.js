@@ -7,7 +7,7 @@ mapboxgl.accessToken = process.env.REACT_APP_MAPBOX_TOKEN
 function HomePageMap(props) {
 	// import MapboxWorker from 'mapbox-gl/dist/mapbox-gl-csp-worker'
 
-	const places = props.places;
+	const places = props.places[0];
 
 	const mapContainer = useRef(null);
 	const map = useRef(null);
