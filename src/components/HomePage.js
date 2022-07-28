@@ -279,7 +279,7 @@ class HomePage extends Component {
           placesNearby={this.state.placesNearby}
           places={this.state.places}
         />
-        <HomePageMap
+        <HomePageMap className="home-page-map-container"
           placeExists={this.state.placeExists}
           places={this.state.places}
           placesNearby={this.state.placesNearby}

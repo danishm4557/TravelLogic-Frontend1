@@ -114,6 +114,10 @@ ls .nav-bar {
   height: 90vh;
 }
 
+.my-video {
+  margin-top: -1rem;
+}
+
 video {
   width: 100%;
   height: 102.2vh;
