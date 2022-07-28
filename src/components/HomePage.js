@@ -229,7 +229,7 @@ class HomePage extends Component {
               className="going-to-input"
               name="going-to"
               placeholder="📍 Going to"
-              apiKey={process.env.REACT_APP_GOOGLE_APIKEY}
+              key={process.env.REACT_APP_GOOGLE_APIKEY}
               onPlaceSelected={(place) => {
                 // console.log(place)
                 this.state.placeSelected = place;
@@ -238,7 +238,7 @@ class HomePage extends Component {
                 this.state.longitude = place.geometry.location.lng();
                 // this.state.cityName = place.address_components[0].long_name
                 this.state.cityName =
-                  place.address_components[0].long_name.replace(" ", "_");
+                  place.address_components[0].long_name.reclearplace(" ", "_");
                 console.log(this.state.cityName);
                 console.log(`Latitude: ${this.state.latitude}`);
                 console.log(`Longitude: ${this.state.longitude}`);
