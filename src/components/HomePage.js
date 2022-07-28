@@ -238,7 +238,7 @@ class HomePage extends Component {
                 this.state.longitude = place.geometry.location.lng();
                 // this.state.cityName = place.address_components[0].long_name
                 this.state.cityName =
-                  place.address_components[0].long_name.reclearplace(" ", "_");
+                  place.address_components[0].long_name.replace(" ", "_");
                 console.log(this.state.cityName);
                 console.log(`Latitude: ${this.state.latitude}`);
                 console.log(`Longitude: ${this.state.longitude}`);
