@@ -79,7 +79,7 @@ class HomePage extends Component {
       console.log(this.state.places);
     }
 
-    fetch(this.localUrl, {
+    fetch(this.localUrl + "home", {
       method: "POST",
       body: JSON.stringify({
         // place: send the whole array back.. this.state.placesArray
@@ -115,6 +115,10 @@ class HomePage extends Component {
 
   getPlaces = (e) => {
     e.preventDefault();
+    this.setState({
+      places: [],
+      placeExists: false,
+    })
     fetch(
       this.state.baseUrl +
         `location_id=${this.state.cityName}&` +
@@ -131,7 +135,8 @@ class HomePage extends Component {
         if (res.status === 200) {
           return res.json();
         } else {
-          return [];
+          console.log("It's not you, it's us! Tourism information on this city is not yet available. Please try another city :)")
+          window.alert("It's not you, it's us! Tourism information on this city is not yet available. Please try another city :)")
         }
       })
       .then((data) => {
@@ -141,11 +146,6 @@ class HomePage extends Component {
           days: data.results[0].days,
         });
         this.handleSubmit(data);
-      })
-      .then(() => {
-        this.setState({
-          places: [],
-        })
       })
     // .then(json => {
     // 	this.handleSubmit(json)
@@ -169,7 +169,7 @@ class HomePage extends Component {
   handleDelete = (id) => {
     // e.preventDefault()
     console.log(id);
-    fetch(this.localUrl + "/" + id, {
+    fetch(this.localUrl + "home/" + id, {
       method: "DELETE",
       credentials: "include",
     }).then((res) => {
